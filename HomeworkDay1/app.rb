@@ -8,8 +8,6 @@ khotun = Person.new("Khotun Khan", 500, 50)
 puts khotun
 puts "\n"
 
-puts khotun.deflect?
-
 loop do
     jin.attack(khotun)
     puts khotun

@@ -18,14 +18,6 @@ class Person
     def attack(other_person)
         puts "#{@name} attacks #{other_person.name} with #{@attack_damage} damage"
         other_person.take_damage(@attack_damage)
-
-        # if other_person.instance_of? Hero
-        #     if other_person.deflect?
-        #         puts "#{other_person.name} deflects the attack"
-        #     end
-        # else
-        #     other_person.take_damage(@attack_damage)
-        # end
     end
 
     def take_damage(damage)
@@ -36,17 +28,6 @@ class Person
         if @hitpoints <= 0
             puts "#{@name} dies"
             true
-        end
-    end
-
-    def deflect?
-        get_random
-    end
-
-    def get_random
-        case rand(100) + 1
-          when  1..80   then true
-          when 81..100   then false
         end
     end
  end
